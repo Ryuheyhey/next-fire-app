@@ -34,8 +34,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-.babelrc.js
-.env
-next-env.d.ts
-next.config.js
-package-lock.json
+
+
