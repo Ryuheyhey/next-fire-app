@@ -8,12 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/shopify-buy": "^2.10.5",
     "autoprefixer": "^10.2.4",
     "firebase": "^8.2.6",
     "next": "10.0.6",
     "postcss": "^8.2.4",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "shopify-buy": "^2.11.0"
   },
   "devDependencies": {
     "@material-ui/core": "^4.11.3",
@@ -23,7 +25,10 @@
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
+    "eslint": "^7.19.0",
     "firebase-tools": "^9.3.0",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0",
     "styled-components": "^5.2.1",
     "typescript": "^4.1.3"
   }

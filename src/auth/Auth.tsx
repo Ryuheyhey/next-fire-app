@@ -1,34 +1,33 @@
-import firebase from 'firebase/app'
-import {FC, createContext, useEffect, useState} from 'react'
-import {auth} from '../utils/firebase'
+import firebase from "firebase/app";
+import { FC, createContext, useEffect, useState } from "react";
+import { auth } from "../utils/firebase";
 
-type User = firebase.User
+type User = firebase.User;
 
 type AuthContextProps = {
-  currentUser: User | null | undefined
-}
+  currentUser: User | null | undefined;
+};
 
-type CurrentUser = User | null | undefined
+type CurrentUser = User | null | undefined;
 
 const AuthContext = createContext<AuthContextProps>({
-  currentUser: undefined
-})
+  currentUser: undefined,
+});
 
-const AuthProvider: FC = ({children}) => {
-  const [currentUser, setCurrentUser] = useState<CurrentUser>(undefined)
+const AuthProvider: FC = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState<CurrentUser>(undefined);
 
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setCurrentUser(user);
+    });
+  }, []);
 
-useEffect(() => {
-  auth.onAuthStateChanged((user) => {
-    setCurrentUser(user)
-  })
-}, [])
+  return (
+    <AuthContext.Provider value={{ currentUser }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-return (
-  <AuthContext.Provider value={{currentUser}}>
-    {children}
-  </AuthContext.Provider>
- )
-}
-
-export {AuthContext, AuthProvider}
+export { AuthContext, AuthProvider };

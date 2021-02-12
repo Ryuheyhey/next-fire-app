@@ -1,7 +1,7 @@
-import 'firebase/auth'
-// import 'firebase/store'
+import "firebase/auth";
+import "firebase/firestore";
 
-import firebase from 'firebase/app'
+import firebase from "firebase/app";
 
 const config = {
   apiKey: process.env.FIREBASE_KEY,
@@ -11,10 +11,12 @@ const config = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_SENDER_ID,
   appId: process.env.FIREBASE_APPID,
-}
+};
 // initializeを複数回走らせない
 if (firebase.apps.length === 0) {
-  firebase.initializeApp(config)
+  firebase.initializeApp(config);
 }
-const auth = firebase.auth()
-export { auth }
+const auth = firebase.auth();
+export { auth };
+const db = firebase.firestore();
+export { db };
