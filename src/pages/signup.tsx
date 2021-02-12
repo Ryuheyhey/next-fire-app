@@ -1,7 +1,7 @@
 import { FC, useEffect, useState, useCallback } from "react";
 import Router, { useRouter } from "next/router";
 import Link from "next/link";
-import { auth, db } from "../utils/firebase";
+import { auth } from "../utils/firebase";
 import { AuthContext } from "../auth/Auth";
 import { TextInput, ComponentButton } from "../component";
 import styles from "../../styles/Home.module.css";
