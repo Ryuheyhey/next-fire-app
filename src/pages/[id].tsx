@@ -21,12 +21,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
-      heiht: 320,
+      height: 320,
       width: 320,
     },
     [theme.breakpoints.up("sm")]: {
       margin: "0 auto",
-      heiht: 400,
+      height: 400,
       width: 400,
     },
   },

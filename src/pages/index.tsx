@@ -45,7 +45,7 @@ const Home: FC<IndexProps> = ({ allProducts }) => {
   }, []);
 
   return (
-    <section className={styles.wrapin}>
+    <section className={styles.wrapin_detail}>
       <h1 className={styles.headline}>商品一覧</h1>
       <div className={styles.row}>
         {products.length > 0 &&
