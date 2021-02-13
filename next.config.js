@@ -9,9 +9,3 @@ module.exports = {
     FIREBASE_APPID: process.env.FIREBASE_APPID,
   },
 };
-
-module.exports = {
-  images: {
-    domains: ["cdn.shopify.com"],
-  },
-};

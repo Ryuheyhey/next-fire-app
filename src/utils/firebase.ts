@@ -4,13 +4,14 @@ import "firebase/auth";
 import firebase from "firebase/app";
 
 const config = {
-  apiKey: process.env.FIREBASE_KEY,
-  authDomain: process.env.FIREBASE_DOMAIN,
-  databeseURL: process.env.FIREBASE_DATABASE,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_SENDER_ID,
-  appId: process.env.FIREBASE_APPID,
+  apiKey: "AIzaSyCy9LvWp_2ZydaTvRq9a2Fnwdskh_Pz1TE",
+  authDomain: "next-fire-app.firebaseapp.com",
+  databaseURL: "https://next-fire-app-default-rtdb.firebaseio.com",
+  projectId: "next-fire-app",
+  storageBucket: "next-fire-app.appspot.com",
+  messagingSenderId: "954590079442",
+  appId: "1:954590079442:web:385b08c3ccabfdf7f5400b",
+  measurementId: "G-PQ6NF2NL4W"
 };
 // initializeを複数回走らせない
 if (firebase.apps.length === 0) {
