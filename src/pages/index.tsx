@@ -60,7 +60,7 @@ const Home: FC<IndexProps> = ({ allProducts }) => {
           ))}
       </div>
     </section>
-  );
+  )
 };
 
 export default Home;
